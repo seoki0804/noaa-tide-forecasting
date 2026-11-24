@@ -1,4 +1,4 @@
-# 해양 시계열 예제 최종 정리
+# NOAA 조위 예측 분석 정리
 
 ## 1. 주제
 - 주제: NOAA 조위(`water_level`) 데이터를 이용한 시계열 분석 및 예측
@@ -21,7 +21,7 @@
 ## 4. 실험 기록 요약
 
 ### 4-1. 단일 탐색 결과
-- 탐색 파일: [noaa_model_search.md](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/noaa_model_search.md)
+- 탐색 파일: [noaa_model_search.md](noaa_model_search.md)
 - 탐색 범위: `30min`, `1h`, `90min`, `2h`, `3h`, `4h` 집계 시계열
 - 비교 모델: `Seasonal Naive`, `AutoReg`, `SARIMA`, `ETS`
 - 동일 조건: 마지막 `48시간` holdout
@@ -29,7 +29,7 @@
 - 성능: `RMSE=0.0513`, `MAE=0.0471`
 
 ### 4-2. Rolling-origin backtest
-- 기록 파일: [noaa_experiment_log.md](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/noaa_experiment_log.md)
+- 기록 파일: [noaa_experiment_log.md](noaa_experiment_log.md)
 - 설정: San Francisco, `4h` 시계열, 48시간 horizon, 5 folds
 - 평균 성능:
   - `AutoReg 4h lags=12`: `RMSE=0.1339`, `MAE=0.1049`
@@ -74,11 +74,11 @@
 - 다중 관측소 평균에서는 `1h AutoReg lags=48`이 가장 낮은 오차를 기록했다.
 - 현재 실험 범위에서는 `4h AutoReg lags=12`가 단일 탐색, rolling-origin, cross-frequency rolling에서 모두 앞섰다.
 
-## 8. 최종 제출 구성
-- 데이터 선정 문서: [dataset_recommendations.md](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/dataset_recommendations.md)
-- 실습 노트북: [02_noaa_tides_water_level_colab.ipynb](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/02_noaa_tides_water_level_colab.ipynb)
-- 모델 탐색 리포트: [noaa_model_search.md](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/noaa_model_search.md)
-- 추가 실험 로그: [noaa_experiment_log.md](/Users/seoki/Downloads/TimeSeriesAnalysis-main/assjgnment/noaa_experiment_log.md)
+## 8. 산출물 구성
+- 데이터 선정 문서: [dataset_recommendations.md](dataset_recommendations.md)
+- 첫 수집 · 탐색 노트북: [02_noaa_tides_water_level_colab.ipynb](02_noaa_tides_water_level_colab.ipynb)
+- 모델 탐색 리포트: [noaa_model_search.md](noaa_model_search.md)
+- 추가 실험 로그: [noaa_experiment_log.md](noaa_experiment_log.md)
 
 ## 9. 한계
 - 분석 기간이 `2025-03-01` ~ `2025-03-20`으로 짧다.
@@ -86,6 +86,6 @@
 - 서로 다른 집계 주파수 비교에서는 더 부드러운 시계열이 유리할 수 있다.
 
 ## 10. 결론
-- 이번 과제의 최종 예제는 `NOAA Tides & Currents`의 조위 데이터를 사용하는 것으로 정리한다.
+- 최종 분석은 `NOAA Tides & Currents`의 조위 데이터를 사용하는 것으로 정리한다.
 - 실험 결과를 종합하면, 기본 예측 모델은 `AutoReg 4h lags=12`가 가장 적절하다.
 - 이 선택은 단일 탐색, rolling-origin backtest, cross-frequency rolling 결과를 반영한 결론이다.

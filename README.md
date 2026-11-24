@@ -48,8 +48,8 @@ AutoReg가 Seasonal Naive 대비 **RMSE 66% 감소**. SARIMA보다도 일관되�
 ## 파일
 
 ```
-final_submission_noaa_tides.ipynb        최종 분석 노트북
-final_noaa_submission.md                 분석 정리 (데이터 선택 이유, 분석 흐름, 결론)
+noaa_tide_forecasting.ipynb              최종 분석 노트북
+analysis_summary.md                      분석 정리 (데이터 선택 이유, 분석 흐름, 결론)
 dataset_recommendations.md               데이터 선정 기록
 noaa_model_search.py / .md               모델 탐색 자동화와 결과 정리
 noaa_experiment_log.py / .md             롤링 백테스트·관측소 확장 실험 로그

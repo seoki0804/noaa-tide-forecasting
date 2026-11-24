@@ -13,12 +13,12 @@
 - 단위: meter
 
 ## 선택 근거
-- [00_OpenMeteo_HourlyWeather_Seoul_Busan_NewYork.ipynb](/Users/seoki/Downloads/TimeSeriesAnalysis-main/notebooks/00_OpenMeteo_HourlyWeather_Seoul_Busan_NewYork.ipynb)는 `공개 API -> 시간 인덱스 정리 -> STL/ACF -> Seasonal Naive` 흐름을 사용한다.
-- [00_OPSD_TimeSeries_Energy_DE.ipynb](/Users/seoki/Downloads/TimeSeriesAnalysis-main/notebooks/00_OPSD_TimeSeries_Energy_DE.ipynb)는 `고빈도 시계열 -> 집계 시각화 -> 마지막 구간 테스트` 흐름을 사용한다.
+- `00_OpenMeteo_HourlyWeather_Seoul_Busan_NewYork.ipynb`는 `공개 API -> 시간 인덱스 정리 -> STL/ACF -> Seasonal Naive` 흐름을 사용한다.
+- `00_OPSD_TimeSeries_Energy_DE.ipynb`는 `고빈도 시계열 -> 집계 시각화 -> 마지막 구간 테스트` 흐름을 사용한다.
 - `NOAA water_level`은 같은 흐름을 그대로 적용할 수 있다.
 - 조위 데이터는 반일주조 패턴이 뚜렷하다.
 
-## 제출 방향
+## 선정 방향
 - 주제: 샌프란시스코 조위 시계열 분석
 - 데이터 수집: NOAA API 직접 호출
 - 분석 순서: 원시 시계열 확인 -> 재집계 시각화 -> STL / ACF / PACF -> Seasonal Naive -> AutoReg / SARIMA 비교
